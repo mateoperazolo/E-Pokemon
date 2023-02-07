@@ -1,0 +1,25 @@
+.Header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.TitleE-Pokemon{
+    margin-left: 30px;
+}
+
+.navHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.LicksHeader{
+    margin: 20px 15px;
+    text-decoration: none;
+}
+
+.searchHeader{
+    margin-right: 20px;
+}

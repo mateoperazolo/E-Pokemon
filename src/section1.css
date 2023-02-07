@@ -1,0 +1,26 @@
+.section1{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(214, 212, 212);
+    align-items: center;
+    justify-content: center;
+}
+
+.logoPokemon{
+    width: 600px;
+    margin: 15px;
+}
+
+.contentSection1{
+    margin: 200px 15px;
+}
+
+.h2Section1{
+    font-size: larger;
+    margin: 0px;
+}
+
+.h1Section1{
+    font-size: 3.5rem;
+    margin: 0px;
+}
