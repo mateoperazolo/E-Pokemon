@@ -1,0 +1,10 @@
+.footer{
+    margin: 20px;
+}
+
+.contentFooter{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}

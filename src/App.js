@@ -3,6 +3,7 @@ import './header.css';
 import './section1.css';
 import './section2.css';
 import './section3.css';
+import './footer.css';
 import pokemonImagen from './images/pokemon.png';
 import pokeballImagen from './images/icons8-pokeball-48.png';
 import Pokemon1 from './images/pokemon1.png';
@@ -58,8 +59,9 @@ function App() {
               <h3>Pokemon description</h3>
             </div>
             <p1>ability,ability,ability,ability,ability...</p1>
+            <hr/>
           </article>
-          
+
           <article className="articleSection2">
             <h2>Pokemon name</h2>
             <div className="contentArticleSection2">
@@ -67,6 +69,7 @@ function App() {
               <h3>Pokemon description</h3>
             </div>
             <p1>ability,ability,ability,ability,ability...</p1>
+            <hr/>
           </article>
         </div>
 
@@ -103,9 +106,9 @@ function App() {
                   viajara a Londres, donde se reunió con el primer ministro, Rishi Sunak, el rey, 
                   Carlos III, y dio un discurso ante el Parlamento
             </p>
+            
           </div>
-
-          <div>
+          <div className="contentPerson">
             <img className="imagenCrew" src={Pokemon1}/>
             <h2>Jose Manuel Rosa</h2>
             <p>El mandatario reafirmó su compromiso para trabajar con el gigante asiático, 
@@ -115,6 +118,25 @@ function App() {
           </div>
         </div>
       </section>
+
+      <footer className="footer">
+        <hr/>
+        <div className="contentFooter">
+          <h1 className="TitleE-Pokemon">e-Pokemon</h1>
+          <div>
+              <a className="LicksHeader">Home</a>
+              <a 
+              className="LicksHeader" 
+              href="/src/Pokemons/index.js">Pokemons</a>
+              <a 
+              className="LicksHeader"
+              href="/src/Support/index.js">Support</a>
+              <a 
+              className="LicksHeader" 
+              href="/src/Contact Us/index.js">Contact Us</a>
+          </div>
+        </div>    
+      </footer>
     </div>
   );
 }
