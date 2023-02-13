@@ -1,34 +1,32 @@
 import React from "react";
-import './header.css'; 
+import { Navigation } from "./components/Navigation";
+import { ArticleSection2 } from "./components/Article/index";
 import './section1.css';
 import './section2.css';
 import './section3.css';
 import './footer.css';
 import pokemonImagen from './images/pokemon.png';
-import pokeballImagen from './images/icons8-pokeball-48.png';
 import Pokemon1 from './images/pokemon1.png';
 import Pokemon2 from './images/pokemon2.png';
 
+const navItems = [
+  {nombre:'Home', link:'/'},
+  {nombre:'Pokemons', link:'/pokemons'},
+  {nombre:'Support', link:'/support'},
+  {nombre:'Contact Us', link:'/contact'},
+  {nombre:'Josecito', link:'/contact'}
+]
+
+const pokemonInfo = [
+  {name: 'Pokemon Name', descripton:'Pokemon Description', ability:'ability, ability, ability...'}
+] 
 
 function App() {
   return (
     <div className="App">
       <header className="Header">
           <h1 className="TitleE-Pokemon">e-Pokemon</h1>
-        <nav className="navHeader">
-          <div >
-            <a className="LicksHeader">Home</a>
-            <a 
-            className="LicksHeader" 
-            href="/src/Pokemons/index.js">Pokemons</a>
-            <a 
-            className="LicksHeader"
-            href="/src/Support/index.js">Support</a>
-            <a 
-            className="LicksHeader" 
-            href="/src/Contact Us/index.js">Contact Us</a>
-          </div>
-        </nav>
+        <Navigation items={navItems}/>
         <input className="searchHeader" type={Text}></input>
 
       </header>
@@ -52,46 +50,15 @@ function App() {
         <h1 className="h1Section2">The important ones!</h1>
 
         <div className="contentSection2">
-          <article className="articleSection2">
-            <h2>Pokemon name</h2>
-            <div className="contentArticleSection2">
-              <img className="pictureSection2" src={pokeballImagen}/>
-              <h3>Pokemon description</h3>
-            </div>
-            <p1>ability,ability,ability,ability,ability...</p1>
-            <hr/>
-          </article>
+          <ArticleSection2 infoPoke={ pokemonInfo }/>
 
-          <article className="articleSection2">
-            <h2>Pokemon name</h2>
-            <div className="contentArticleSection2">
-              <img className="pictureSection2" src={pokeballImagen}/>
-              <h3>Pokemon description</h3>
-            </div>
-            <p1>ability,ability,ability,ability,ability...</p1>
-            <hr/>
-          </article>
+          <ArticleSection2 infoPoke={ pokemonInfo }/>
         </div>
 
         <div className="contentSection2">  
-          <article className="articleSection2">
-            <h2>Pokemon name</h2>
-            <div className="contentArticleSection2">
-              <img className="pictureSection2" src={pokeballImagen}/>
-              <h3>Pokemon description</h3>
-            </div>
-            <p1>ability,ability,ability,ability,ability...</p1>
-          </article>
+          <ArticleSection2 infoPoke={ pokemonInfo }/>
           
-          <article className="articleSection2">
-            <h2>Pokemon name</h2>
-            <div className="contentArticleSection2">
-              <img className="pictureSection2" src={pokeballImagen}/>
-              <h3>Pokemon description</h3>
-            </div>
-            <p1>ability,ability,ability,ability,ability...</p1>
-          </article>
-
+          <ArticleSection2 infoPoke={ pokemonInfo }/>
         </div>
 
       </section>
@@ -123,18 +90,7 @@ function App() {
         <hr/>
         <div className="contentFooter">
           <h1 className="TitleE-Pokemon">e-Pokemon</h1>
-          <div>
-              <a className="LicksHeader">Home</a>
-              <a 
-              className="LicksHeader" 
-              href="/src/Pokemons/index.js">Pokemons</a>
-              <a 
-              className="LicksHeader"
-              href="/src/Support/index.js">Support</a>
-              <a 
-              className="LicksHeader" 
-              href="/src/Contact Us/index.js">Contact Us</a>
-          </div>
+          <Navigation items={navItems}/>
         </div>    
       </footer>
     </div>
